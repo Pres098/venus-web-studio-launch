@@ -107,7 +107,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Stunning Design</h3>
                 <p className="text-gray-600">
-                  Visually appealing, modern designs that capt}ivate your audience and represent your brand perfectly.
+                  Visually appealing, modern designs that captivate your audience and represent your brand perfectly.
                 </p>
               </CardContent>
             </Card>
