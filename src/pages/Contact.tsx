@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ContactForm from '../components/ContactForm';
-import { MessageSquare, Phone, Telegram, Mail } from 'lucide-react';
+import { MessageSquare, Phone, Send, Mail } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -67,7 +67,7 @@ const Contact = () => {
                 
                 <div className="flex items-center">
                   <div className="h-12 w-12 rounded-full gradient-bg flex items-center justify-center text-white mr-4">
-                    <Telegram size={20} />
+                    <Send size={20} />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">Telegram</h3>
