@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 gradient-text">Venus WebStudio</h3>
+            <h3 className="text-xl font-bold mb-4 gradient-text">Venux WebStudio</h3>
             <p className="text-gray-600 mb-4">
               Professional website design at affordable prices. Get your website up and running in just 3 days.
             </p>
@@ -58,7 +58,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 mt-8 pt-6 text-center">
           <p className="text-gray-600">
-            © {currentYear} Venus WebStudio. All rights reserved.
+            © {currentYear} Venux WebStudio. All rights reserved.
           </p>
         </div>
       </div>

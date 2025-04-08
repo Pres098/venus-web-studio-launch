@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container-custom py-4">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold gradient-text">Venus WebStudio</span>
+            <span className="text-2xl font-bold gradient-text">Venux WebStudio</span>
           </NavLink>
 
           {/* Desktop Navigation */}

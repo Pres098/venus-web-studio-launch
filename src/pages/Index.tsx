@@ -86,7 +86,7 @@ const Index = () => {
       {/* Why Choose Us Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Venus WebStudio?</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Venux WebStudio?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
               <CardContent className="p-8">
@@ -107,7 +107,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Stunning Design</h3>
                 <p className="text-gray-600">
-                  Visually appealing, modern designs that captivate your audience and represent your brand perfectly.
+                  Visually appealing, modern designs that capt}ivate your audience and represent your brand perfectly.
                 </p>
               </CardContent>
             </Card>
@@ -216,7 +216,7 @@ const Index = () => {
         <div className="container-custom text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Launch Your Website?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Take the first step toward establishing your online presence with Venus WebStudio today.
+            Take the first step toward establishing your online presence with Venux WebStudio today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
