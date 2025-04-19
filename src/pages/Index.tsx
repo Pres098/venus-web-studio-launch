@@ -1,210 +1,309 @@
 
 import React from 'react';
-import { ArrowDown, Check, Code, Layout, Zap, Globe, Award, Clock } from 'lucide-react';
+import { ArrowRight, Code, Layout, Zap, Globe, Clock, Medal, CheckCircle2, SquareCode, ArrowDown } from 'lucide-react';
 import Button from '../components/Button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-dots-pattern bg-[size:20px_20px]">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 lg:py-32">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-              <span className="gradient-text">Get a Professional Website in 3 Days</span>
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-venux-light">
+        {/* Background Elements */}
+        <div className="blob-shape bg-venux-purple/5 w-[800px] h-[800px] -top-[400px] -right-[400px]"></div>
+        <div className="blob-shape bg-venux-teal/5 w-[600px] h-[600px] -bottom-[300px] -left-[300px]"></div>
+        
+        <div className="container-custom relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <Badge className="mb-4 gradient-bg animate-pulse-slow">Website in 3 Days</Badge>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
+              Stunning websites that <span className="gradient-text">captivate & convert</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Don't waste time or money. I'll build you a fast, mobile-friendly, SEO-ready site for your business or brand.
+            
+            <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              No long waits. No excessive costs. Get a professional, high-performance website 
+              built by experts in just 3 days.
             </p>
-            <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <Button 
                 externalLink="mailto:venuxwebstudio@gmail.com" 
                 size="lg"
+                className="shadow-lg"
               >
-                Get Started
+                Start Your Project
+                <ArrowRight size={18} />
+              </Button>
+              
+              <Button 
+                href="/portfolio" 
+                variant="outline"
+                size="lg"
+              >
+                View Our Work
               </Button>
             </div>
             
-            <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <a href="#what-you-get" className="flex flex-col items-center text-gray-600 hover:text-venus-purple transition-colors">
-                <span className="mb-2">Learn More</span>
-                <ArrowDown className="animate-bounce" />
-              </a>
+            <div className="mt-16 flex flex-wrap justify-center gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-green-500" />
+                <span className="text-gray-600">3-Day Delivery</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-green-500" />
+                <span className="text-gray-600">Mobile Responsive</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-green-500" />
+                <span className="text-gray-600">SEO Optimized</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={20} className="text-green-500" />
+                <span className="text-gray-600">Modern Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <a href="#benefits" className="text-gray-400 hover:text-venux-purple transition-colors">
+            <ArrowDown size={24} />
+          </a>
+        </div>
+      </section>
+      
+      {/* Benefits Section */}
+      <section id="benefits" className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Why Choose Us</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Benefits of working with <span className="gradient-text">Venux</span></h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We combine creativity, speed, and technical excellence to deliver websites that not only look 
+              stunning but also drive results for your business.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="feature-card animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="feature-icon">
+                <Clock size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Lightning Fast Delivery</h3>
+              <p className="text-gray-600">
+                Get your website up and running in just 3 days, without compromising on quality or features.
+              </p>
+            </div>
+            
+            <div className="feature-card animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="feature-icon">
+                <Layout size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Beautiful UX/UI Design</h3>
+              <p className="text-gray-600">
+                Eye-catching designs that are not just visually appealing but also intuitive and user-friendly.
+              </p>
+            </div>
+            
+            <div className="feature-card animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="feature-icon">
+                <Globe size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Search Engine Optimized</h3>
+              <p className="text-gray-600">
+                Every website is built with SEO best practices to help you rank higher in search results.
+              </p>
+            </div>
+            
+            <div className="feature-card animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="feature-icon">
+                <Zap size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">High-Performance</h3>
+              <p className="text-gray-600">
+                Fast-loading websites optimized for performance across all devices and connection speeds.
+              </p>
+            </div>
+            
+            <div className="feature-card animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <div className="feature-icon">
+                <Code size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Clean Code</h3>
+              <p className="text-gray-600">
+                Well-structured, maintainable code that ensures your website runs smoothly for years to come.
+              </p>
+            </div>
+            
+            <div className="feature-card animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="feature-icon">
+                <Medal size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Premium Quality</h3>
+              <p className="text-gray-600">
+                Professional-grade design and development that rivals expensive agency work at a fraction of the cost.
+              </p>
             </div>
           </div>
         </div>
       </section>
       
-      {/* What You'll Get Section */}
-      <section id="what-you-get" className="section-padding bg-white">
+      {/* How It Works Section */}
+      <section className="section-padding bg-dots-pattern bg-[size:20px_20px]">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-8">What You'll Get:</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-3xl mx-auto text-left">
-              <div className="flex items-start">
-                <div className="h-6 w-6 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white mr-3">
-                  <Check size={16} />
-                </div>
-                <p className="text-lg">3-5 Page Custom Website</p>
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Simple Process</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">How we create your <span className="gradient-text">perfect website</span></h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our streamlined process ensures we deliver your website on time without compromising on quality.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto">
+            <div className="relative flex flex-col items-center text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="h-20 w-20 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-2xl mb-6 relative z-10 animate-float">
+                1
               </div>
-              <div className="flex items-start">
-                <div className="h-6 w-6 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white mr-3">
-                  <Check size={16} />
-                </div>
-                <p className="text-lg">Mobile Responsive Design</p>
+              <h3 className="text-xl font-bold mb-3">Discovery</h3>
+              <p className="text-gray-600">
+                We'll discuss your goals, brand, and vision for your website to understand exactly what you need.
+              </p>
+              
+              {/* Connector line (visible on desktop) */}
+              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gray-200 -z-10"></div>
+            </div>
+            
+            <div className="relative flex flex-col items-center text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="h-20 w-20 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-2xl mb-6 relative z-10 animate-float" style={{ animationDelay: '1s' }}>
+                2
               </div>
-              <div className="flex items-start">
-                <div className="h-6 w-6 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white mr-3">
-                  <Check size={16} />
-                </div>
-                <p className="text-lg">Contact Form Integration</p>
+              <h3 className="text-xl font-bold mb-3">Design & Development</h3>
+              <p className="text-gray-600">
+                Our experts get to work creating your stunning website with all the features you need.
+              </p>
+              
+              {/* Connector line (visible on desktop) */}
+              <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gray-200 -z-10"></div>
+            </div>
+            
+            <div className="flex flex-col items-center text-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <div className="h-20 w-20 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-2xl mb-6 animate-float" style={{ animationDelay: '2s' }}>
+                3
               </div>
-              <div className="flex items-start">
-                <div className="h-6 w-6 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white mr-3">
-                  <Check size={16} />
-                </div>
-                <p className="text-lg">Fast Loading Speed</p>
-              </div>
-              <div className="flex items-start">
-                <div className="h-6 w-6 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white mr-3">
-                  <Check size={16} />
-                </div>
-                <p className="text-lg">SEO Optimization</p>
-              </div>
-              <div className="flex items-start">
-                <div className="h-6 w-6 rounded-full gradient-bg flex-shrink-0 flex items-center justify-center text-white mr-3">
-                  <Check size={16} />
-                </div>
-                <p className="text-lg">Free SSL Certificate</p>
-              </div>
+              <h3 className="text-xl font-bold mb-3">Launch</h3>
+              <p className="text-gray-600">
+                Within 3 days, your professional website goes live, ready to attract and convert visitors.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Why Choose Us Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose Venux WebStudio?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-8">
-                <div className="h-12 w-12 rounded-full gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Lightning Fast Delivery</h3>
-                <p className="text-gray-600">
-                  No long waiting periods. Get your professional website up and running in just 3 days or less.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-8">
-                <div className="h-12 w-12 rounded-full gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Layout size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Stunning Design</h3>
-                <p className="text-gray-600">
-                  Visually appealing, modern designs that captivate your audience and represent your brand perfectly.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-              <CardContent className="p-8">
-                <div className="h-12 w-12 rounded-full gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Code size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Clean Code</h3>
-                <p className="text-gray-600">
-                  Optimized, well-structured code ensuring your website loads quickly and functions flawlessly.
-                </p>
-              </CardContent>
-            </Card>
+          
+          <div className="mt-16 text-center">
+            <Button 
+              href="/contact" 
+              size="lg"
+              className="shadow-lg animate-fade-in" 
+              style={{ animationDelay: '0.7s' }}
+            >
+              Start Your 3-Day Project
+              <ArrowRight size={18} />
+            </Button>
           </div>
         </div>
       </section>
       
-      {/* Our Process Section */}
+      {/* Tech Stack Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-8">Our Simple Process:</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="relative">
-                <div className="h-16 w-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
-                  <span className="text-2xl font-bold">1</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Choose Your Package</h3>
-                <p className="text-gray-600">
-                  Select the service package that best fits your needs and budget from our flexible options.
-                </p>
-                {/* Line connector (visible on desktop) */}
-                <div className="hidden md:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-gray-200"></div>
-              </div>
-              
-              <div className="relative">
-                <div className="h-16 w-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
-                  <span className="text-2xl font-bold">2</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Provide Your Content</h3>
-                <p className="text-gray-600">
-                  Share your branding, images, text content, and any specific requirements for your website.
-                </p>
-                {/* Line connector (visible on desktop) */}
-                <div className="hidden md:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-gray-200"></div>
-              </div>
-              
-              <div>
-                <div className="h-16 w-16 rounded-full gradient-bg flex items-center justify-center text-white mx-auto mb-6">
-                  <span className="text-2xl font-bold">3</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Get Your Site in 3 Days</h3>
-                <p className="text-gray-600">
-                  Your professional website will be delivered and ready to launch in just 3 days.
-                </p>
-              </div>
-            </div>
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Technologies</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Built with modern <span className="gradient-text">tech stack</span></h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We use cutting-edge technologies to build websites that are fast, secure, and future-proof.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <Card className="bg-white shadow-sm hover:shadow-md transition-all text-center py-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <CardContent className="p-4 flex flex-col items-center">
+                <SquareCode size={48} className="text-venux-purple mb-4" />
+                <h3 className="font-bold">React</h3>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-sm hover:shadow-md transition-all text-center py-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <CardContent className="p-4 flex flex-col items-center">
+                <SquareCode size={48} className="text-venux-purple mb-4" />
+                <h3 className="font-bold">Next.js</h3>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-sm hover:shadow-md transition-all text-center py-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <CardContent className="p-4 flex flex-col items-center">
+                <SquareCode size={48} className="text-venux-purple mb-4" />
+                <h3 className="font-bold">Tailwind CSS</h3>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-sm hover:shadow-md transition-all text-center py-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <CardContent className="p-4 flex flex-col items-center">
+                <SquareCode size={48} className="text-venux-purple mb-4" />
+                <h3 className="font-bold">TypeScript</h3>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
       
-      {/* Features Section */}
-      <section className="section-padding bg-gray-50">
+      {/* Testimonials Section */}
+      <section className="section-padding bg-dots-pattern bg-[size:20px_20px]">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold mb-12 text-center">Advanced Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
-              <Globe className="h-10 w-10 text-venus-purple mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Global Reach</h3>
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Testimonials</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">What our clients <span className="gradient-text">say about us</span></h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it – hear from our satisfied clients.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="glass-card p-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="flex items-center mb-6">
+                <div className="h-12 w-12 rounded-full bg-gray-200 mr-4"></div>
+                <div>
+                  <h4 className="font-bold">Sarah Johnson</h4>
+                  <p className="text-gray-600 text-sm">Fitness Studio Owner</p>
+                </div>
+              </div>
               <p className="text-gray-600">
-                Websites optimized for international audiences with multi-language support available.
+                "Venux delivered my website in just 3 days, and it exceeded all my expectations. The design is beautiful, and I've already seen an increase in client inquiries!"
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
-              <Award className="h-10 w-10 text-venus-purple mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Award-Winning Design</h3>
+            <div className="glass-card p-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="flex items-center mb-6">
+                <div className="h-12 w-12 rounded-full bg-gray-200 mr-4"></div>
+                <div>
+                  <h4 className="font-bold">Michael Chang</h4>
+                  <p className="text-gray-600 text-sm">Restaurant Owner</p>
+                </div>
+              </div>
               <p className="text-gray-600">
-                Modern, clean aesthetics that follow the latest design trends and best practices.
+                "I was skeptical about the 3-day timeline, but Venux delivered as promised. My restaurant's online presence has never looked better, and our online orders have increased by 30%."
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
-              <Clock className="h-10 w-10 text-venus-purple mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Timely Updates</h3>
+            <div className="glass-card p-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="flex items-center mb-6">
+                <div className="h-12 w-12 rounded-full bg-gray-200 mr-4"></div>
+                <div>
+                  <h4 className="font-bold">Emma Davis</h4>
+                  <p className="text-gray-600 text-sm">Photographer</p>
+                </div>
+              </div>
               <p className="text-gray-600">
-                Quick turnaround on content updates and maintenance requests when you need them.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center">
-              <Zap className="h-10 w-10 text-venus-purple mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Performance Optimized</h3>
-              <p className="text-gray-600">
-                Websites built for speed with optimized images, code, and server response times.
+                "As a photographer, I needed a website that showcased my work beautifully. Venux understood my vision perfectly and created a stunning portfolio that has helped me attract new clients."
               </p>
             </div>
           </div>
@@ -214,25 +313,27 @@ const Index = () => {
       {/* CTA Section */}
       <section className="section-padding gradient-bg text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Launch Your Website?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for your website transformation?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Take the first step toward establishing your online presence with Venux WebStudio today.
+            Let's build your professional website in just 3 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               externalLink="mailto:venuxwebstudio@gmail.com" 
-              variant="secondary"
+              variant="accent"
               size="lg"
+              className="border-white/20"
             >
               Get Started Now
+              <ArrowRight size={18} />
             </Button>
             <Button 
-              href="/contact" 
+              href="/portfolio" 
               variant="outline" 
               size="lg"
               className="bg-white/10 border-white hover:bg-white/20"
             >
-              Contact Us
+              View Our Work
             </Button>
           </div>
         </div>

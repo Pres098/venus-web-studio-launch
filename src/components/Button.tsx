@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'accent';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   externalLink?: string;
@@ -21,18 +21,19 @@ const Button = ({
   className = '',
   onClick,
 }: ButtonProps) => {
-  const baseStyles = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50';
+  const baseStyles = 'inline-flex items-center justify-center rounded-xl font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 button-hover-effect';
   
   const variantStyles = {
-    primary: 'gradient-bg text-white hover:bg-opacity-90',
-    secondary: 'bg-venus-teal text-white hover:bg-opacity-90',
-    outline: 'border border-venus-purple text-venus-purple hover:bg-venus-purple/10'
+    primary: 'gradient-bg text-white hover:shadow-lg',
+    secondary: 'bg-venux-teal text-white hover:shadow-lg',
+    accent: 'bg-venux-accent text-white hover:shadow-lg',
+    outline: 'border-2 border-venux-purple text-venux-purple hover:bg-venux-purple/5'
   };
   
   const sizeStyles = {
     sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+    md: 'px-5 py-2.5 text-base',
+    lg: 'px-7 py-3 text-lg'
   };
   
   const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;

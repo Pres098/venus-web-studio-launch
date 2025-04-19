@@ -1,21 +1,40 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="sticky top-0 bg-white shadow-sm z-50">
+    <nav className={`sticky top-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+    }`}>
       <div className="container-custom py-4">
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold gradient-text">Venux WebStudio</span>
+            <div className="h-10 w-10 rounded-xl gradient-bg flex items-center justify-center text-white font-bold">
+              V
+            </div>
+            <span className="text-2xl font-bold gradient-text">Venux</span>
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -38,7 +57,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button 
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-venus-purple"
+              className="text-gray-700 hover:text-venux-purple"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
