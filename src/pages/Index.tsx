@@ -203,8 +203,7 @@ const Index = () => {
             <Button 
               href="/contact" 
               size="lg"
-              className="shadow-lg animate-fade-in" 
-              style={{ animationDelay: '0.7s' }}
+              className="shadow-lg animate-fade-in delay-700"
             >
               Start Your 3-Day Project
               <ArrowRight size={18} />
@@ -343,3 +342,4 @@ const Index = () => {
 };
 
 export default Index;
+
